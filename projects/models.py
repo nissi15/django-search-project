@@ -24,7 +24,7 @@ class Project(models.Model):
 class Review(models.Model):
     VOTE_TYPE = (
         ('up', 'Up Vote'),
-        ('down', 'down Vote'),
+        ('down', 'Down Vote'),
     )
     # owner
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
@@ -39,7 +39,6 @@ class Review(models.Model):
     def __str__(self):
         return self.value
 
-
     
 class Tag(models.Model): 
     name = models.CharField(max_length=200)
@@ -48,6 +47,15 @@ class Tag(models.Model):
 
     def __str__(self):
         return self.name
+
+
+
+
+
+
+
+
+
 
 
 
